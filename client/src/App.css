@@ -1,0 +1,75 @@
+.App {
+  text-align: center;
+  background-color: rgb(71, 71, 224);
+}
+/* Logos*/
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  margin: 2%;
+}
+.poli_logo {
+ height: 15vmin;
+ margin-top: 1%;
+}
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/*Contenedor*/
+.container{
+  display: flex;
+  margin: 2%;
+}
+.col-2, .col{
+  flex: 1;
+  background-color:rgb(13, 13, 72);
+  margin: 2%;
+}
+.col-2{
+  flex: 2;
+  
+}
+/*Lista de precios*/
+
+.listmoney{
+  list-style: none;
+}
+.item {
+  color: white;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+  width: auto;
+}
+
+.item.active {
+  background-color: teal;
+}
+
+.earned {
+  margin: 2%;
+  color: white;
+  
+}
