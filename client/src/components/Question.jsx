@@ -3,19 +3,19 @@ import './styles/Question.css';
 
 //Recibimos la pregunta, las opciones y un metodo para almacenar 
 //Recibimos si la pregunta fue correcta
-const Question = ({ question, options, handleOptionSelect, questionCheck }) => {
+const Question = ({ question, options, handleOptionSelect, questionCheck}) => {
 
   
   return (
     <div className="quiz">
-      
+       
       <div className="question">
       {question}
       
       </div>
       <div className="answers">
         {options.map((option, index) => (
-          
+          //Validacion en caso de que vuelva vacio
           <button className="answer" key={index} onClick={() => handleOptionSelect(option)}>
             {option}
           </button>

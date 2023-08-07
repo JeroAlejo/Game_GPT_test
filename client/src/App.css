@@ -1,6 +1,12 @@
+.main{
+
+}
 .App {
   text-align: center;
   background-color: rgb(71, 71, 224);
+  width: 100%;
+  height: 100%;
+ 
 }
 /* Logos*/
 .App-logo {
@@ -10,7 +16,7 @@
 }
 .poli_logo {
  height: 15vmin;
- margin-top: 1%;
+ margin: 2%;
 }
 
 
@@ -55,16 +61,18 @@
 
 .listmoney{
   list-style: none;
+  text-align: center;
 }
 .item {
   color: white;
   align-items: center;
-  text-align: center;
-  border-radius: 5px;
-  width: auto;
+  border-radius: 50px;
+  margin-left: 30%;
+  margin-right: 30%;
+  font-size:medium;
 }
 
-.item.active {
+.item.active { 
   background-color: teal;
 }
 
@@ -72,4 +80,30 @@
   margin: 2%;
   color: white;
   
+}
+/*Botones*/
+.btnRetirarse{
+  
+  width:30%;
+  padding: 2%;
+  margin: 2%;
+  border: 2% solid black;
+  border-radius:50px;
+  color:black;
+  font-weight: bold;
+  transition: all 0.9s;
+  text-align: center;
+  font-size: 100%;
+}
+
+.btnRetirarse:hover{
+
+  background: rgb(212, 31, 31);
+  color:white;
+
+}
+
+/*Verificar resultados gana pierde o se retira*/
+.results{
+  color: white;
 }
