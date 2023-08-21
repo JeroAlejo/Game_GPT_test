@@ -5,9 +5,11 @@ const bodyParser = require("body-parser");
 const {Configuration, OpenAIApi} = require("openai");
 
 const config = new Configuration({
-    //apiKey: "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"
-    apiKey: "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"
+    //Gratuito
+    //apiKey: "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"
 
+    //Pago
+    apiKey: "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"
 })
 
 const openai = new OpenAIApi(config);
@@ -38,6 +40,7 @@ app.post("/contexto", async(_, res) =>{
 
 
 //endopint es para generar las preguntas 
+
 app.post("/chat", async(req, res) =>{
 
     const {prompt} = req.body;
@@ -47,11 +50,17 @@ app.post("/chat", async(req, res) =>{
         max_tokens: 512,
         temperature: 0.6,
         prompt: prompt+" Cada vez que te pida una pregunta retornala en este formato: "+
-        "Pregunta \n opcion \n opcion 2 \n opcion 3 \n opcion 4"
+        "Pregunta \nOpcion 1 \nOpcion 2 \nOpcion 3 \nOpcion 4 \nOpcion correcta"+
+        " y La Opcion debe ser escrita igual que las opciones. Aqui tienes un ejemplo de como se deberia ver: "+
+        "Pregunta: ¿Cuál de los siguientes países no pertenece a la Unión Europea? \nOpcion 1: Italia \nOpcion 2: Francia\nOpcion 3: Noruega \nOpcion 4: España \nOpcion correcta: Noruega"
+        +"trata de evitar poner comillas y espacios innecesarios"
+        
     });
     console.log(completion.data.choices[0].text);
     res.send(completion.data.choices[0].text);
 })
+
+
 /*
 app.post("/chat", async(req, res) =>{
 
@@ -85,7 +94,7 @@ app.post("/check_answer", async(req, res) =>{
     const completion = await openai.createCompletion({
         model: "text-davinci-003",
         max_tokens: 512,
-        temperature: 0,
+        temperature: 0.8,
         prompt: prompt,
     });
     console.log(completion.data.choices[0].text);

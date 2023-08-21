@@ -41,3 +41,12 @@
     font-size: 20px;
     cursor: pointer;
   }
+  .answer:hover{
+
+    background:rgb(255, 165, 0);
+    color:white;
+  }
+  .answer.selected {
+    background: green;
+    color: white;
+  }

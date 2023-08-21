@@ -1,5 +1,7 @@
 .main{
-
+  background-color: rgb(71, 71, 224);
+  width: 100%;
+  height: 100%;
 }
 .App {
   text-align: center;
@@ -47,6 +49,7 @@
 .container{
   display: flex;
   margin: 2%;
+  
 }
 .col-2, .col{
   flex: 1;
@@ -82,6 +85,29 @@
   
 }
 /*Botones*/
+.btnComenzar{
+  
+  width:30%;
+  padding: 2%;
+  margin: 2%;
+  border: 2% solid black;
+  border-radius:50px;
+  background: linear-gradient(#0e0124, #22074d);
+  color: white;
+  font-weight: bold;
+  transition: all 0.9s;
+  text-align: center;
+  font-size: 100%;
+  cursor: pointer;
+}
+
+.btnComenzar:hover{
+
+  background: rgb(4, 185, 4);
+  color:white;
+  
+
+}
 .btnRetirarse{
   
   width:30%;
@@ -94,6 +120,7 @@
   transition: all 0.9s;
   text-align: center;
   font-size: 100%;
+  cursor: pointer;
 }
 
 .btnRetirarse:hover{
@@ -103,6 +130,27 @@
 
 }
 
+.btnAgain{
+  
+  width:30%;
+  padding: 2%;
+  margin: 2%;
+  border: 2% solid black;
+  border-radius:50px;
+  background: linear-gradient(#0e0124, #22074d);
+  color: white;
+  font-weight: bold;
+  transition: all 0.9s;
+  text-align: center;
+  font-size: 100%;
+  cursor: pointer;
+}
+
+.btnAgain:hover{
+
+  background: rgb(4, 185, 4);
+  color:white;
+}
 /*Verificar resultados gana pierde o se retira*/
 .results{
   color: white;
